@@ -12068,6 +12068,7 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.Extensions.Caching.Memory >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
@@ -12078,11 +12079,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bbdnet2004\\Documents\\Learning\\dotNET\\myfirstmvcapp\\myfirstmvcapp.csproj",
+      "projectUniqueName": "C:\\Users\\bbdnet2004\\Documents\\Learning\\dotNET\\mvcapp_app\\myfirstmvcapp\\myfirstmvcapp.csproj",
       "projectName": "myfirstmvcapp",
-      "projectPath": "C:\\Users\\bbdnet2004\\Documents\\Learning\\dotNET\\myfirstmvcapp\\myfirstmvcapp.csproj",
+      "projectPath": "C:\\Users\\bbdnet2004\\Documents\\Learning\\dotNET\\mvcapp_app\\myfirstmvcapp\\myfirstmvcapp.csproj",
       "packagesPath": "C:\\Users\\bbdnet2004\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bbdnet2004\\Documents\\Learning\\dotNET\\myfirstmvcapp\\obj\\",
+      "outputPath": "C:\\Users\\bbdnet2004\\Documents\\Learning\\dotNET\\mvcapp_app\\myfirstmvcapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12120,6 +12121,10 @@
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.Extensions.Caching.Memory": {
             "target": "Package",
             "version": "[2.2.0, )"
           },

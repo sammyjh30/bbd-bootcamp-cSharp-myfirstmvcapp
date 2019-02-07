@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using myfirstmvcapp.Models;
 using System.Text.Encodings.Web;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace myfirstmvcapp.Controllers
 {
     public class HomeController : Controller
     {
+
+        //Creating a constructor
+        private IMemoryCache _cache;
+
+        public HomeController(IMemoryCache memoryCache)
+        {
+            _cache = memoryCache;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -30,6 +40,11 @@ namespace myfirstmvcapp.Controllers
         public string SayHi(string name, string department = "Unknown")
         {
             return HtmlEncoder.Default.Encode($"Hello {name} from {department}");
+        }
+
+        public string SayHi2(int id, string name = "Gery")
+        {
+            return HtmlEncoder.Default.Encode($"{id}. hi {name}!");
         }
 
         public IActionResult SayHiAgain(string name, int id = 1)
