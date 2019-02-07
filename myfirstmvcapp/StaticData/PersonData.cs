@@ -24,5 +24,11 @@ namespace myfirstmvcapp.StaticData
             new Person() { Id = 5, Name = "BB-8", Department = "Absa", Years = 555.55M },
             new Person() { Id = 6, Name = "C1-10P", Department = "Standard Bank", Years = 99 },
         };
+
+        public static void AddPerson(Person newPerson)
+        {
+            var ID = listOfPeople[listOfPeople.Count - 1].Id + 1;
+            listOfPeople.Add(new Person() {Id = ID, Name = newPerson.Name, Department = newPerson.Department, Years = newPerson.Years});
+        }
     }
 }

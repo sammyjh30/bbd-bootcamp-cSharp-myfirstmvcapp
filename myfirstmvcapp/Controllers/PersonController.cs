@@ -30,7 +30,7 @@ namespace myfirstmvcapp.Controllers
             return View(person);
         }
 
-         public IActionResult Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (!id.HasValue)
             {
@@ -47,6 +47,36 @@ namespace myfirstmvcapp.Controllers
             return View(person);
         }
 
+         public IActionResult Add()
+        {
+           return View();
+        }
+
+        public IActionResult List()
+        {
+            var person = (from user in PersonData.People
+                          select new
+                          {
+                              Id = user.Id,
+                              Name = user.Name,
+                              Department = user.Department,
+                              Years = user.Years
+                          }).ToList().Select(p => new Person()
+
+                          {
+                              Id = p.Id,
+                              Name = p.Name,
+                              Department = p.Department,
+                              Years = p.Years
+                          });
+
+            if (person == null)
+            {
+                return NotFound();
+            }
+            return View(person);
+        }
+
         [HttpPost]
         public IActionResult Edit(int id, [Bind("Id,Name,Department,Years")] Person person)
         {
@@ -59,6 +89,18 @@ namespace myfirstmvcapp.Controllers
             {
                 Person.UpdatePerson(id, person);
                 return RedirectToAction("Details", new { id = id });
+            }
+
+            return View(person);
+        }
+
+        [HttpPost]
+        public IActionResult Add(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                PersonData.AddPerson(person);
+                return RedirectToAction("List");
             }
 
             return View(person);

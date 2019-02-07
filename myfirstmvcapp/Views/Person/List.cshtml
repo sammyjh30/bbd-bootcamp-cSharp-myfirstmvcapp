@@ -1,0 +1,32 @@
+@model IEnumerable<myfirstmvcapp.Models.Person>
+
+@{
+    ViewData["Title"] = "Person";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<div class="panel-body">
+        <table class="table table-hover table-bordered table-condensed" id="example1">
+            <thead>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Department</b></td>
+                    <td><b>Years</b></td>
+                    <td><b></b></td>
+                </tr>
+            </thead>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Department</td>
+                    <td>@user.Years</td>
+                    <td><button><a asp-action="Details" asp-route-id="@user.Id">Details</a></button><button><a asp-action="Details" asp-route-id="@user.Id">Delete</a></button></td>
+                </tr>
+            }
+        </table>
+        <a asp-action="Add">Add</a>
+
+</div>

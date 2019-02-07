@@ -64,3 +64,5 @@ C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\myfirstmvcapp.RazorTargetAssemblyInfo.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\myfirstmvcapp.Views.pdb
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\myfirstmvcapp.csproj.CopyComplete
+C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Person\List.g.cshtml.cs
+C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Person\Add.g.cshtml.cs

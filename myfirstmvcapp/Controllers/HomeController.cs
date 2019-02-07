@@ -18,11 +18,31 @@ namespace myfirstmvcapp.Controllers
 
         public HomeController(IMemoryCache memoryCache)
         {
-            _cache = memoryCache;
+            this._cache = memoryCache;
+            // _cache = memoryCache;
         }
 
         public IActionResult Index()
         {
+            Person myVar;
+
+            if (!_cache.TryGetValue<Person>("something", out myVar))
+            {
+                Console.WriteLine("User does not exists");
+                _cache.Set("something", new Person() { Id = 13, Name = "Luke Skywalker", Department = "Death Star", Years = 1000 });
+                // Nest time we load the page, the get should succeed
+                // Be careful what you put inside, not data that changes a lot.
+                // You can control time, etc. but rather put static info
+            }
+            else{
+                Console.WriteLine("User exists");
+            }
+            // Whatever you get must be a string, so it will cast for you:
+            // _cache.Get<string>
+            // To set: I want to set this key to something:
+            //_cache.Set()
+
+
             return View();
         }
 

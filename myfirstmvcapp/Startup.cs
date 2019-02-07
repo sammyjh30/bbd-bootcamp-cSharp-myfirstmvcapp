@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+// using myfirstmvcapp.Models;
 
 namespace myfirstmvcapp
 {
@@ -32,6 +33,7 @@ namespace myfirstmvcapp
             });
 
 
+            // services.AddDbContext<ApplicationDbContext>(options => options.)
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // Add services to usse dependency injections to inject into controllers
