@@ -1,4 +1,4 @@
-@model myfirstmvcapp.Models.Person
+@model myfirstmvcapp.Models.AddPersonModel
 
 @{
     ViewData["Title"] = "Edit Person";
@@ -9,26 +9,34 @@
 <form asp-action="Edit">
     <div class="form-horizontal">
         <!-- Hidden ID Because if we don't when we post to edit the ID won't be there. -->
-        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="PersonInfo.Id" />
         <div class="form-group">
-            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <label asp-for="PersonInfo.Name" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <input asp-for="PersonInfo.Name" class="form-control" />
+                <span asp-validation-for="PersonInfo.Name" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Department" class="col-md-2 control-label"></label>
+            <label asp-for="PersonInfo.Department" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Department" class="form-control" />
-                <span asp-validation-for="Department" class="text-danger"></span>
+                <select name="PersonInfo.Department" asp-validation-for="PersonInfo.Department" class="form-control">
+                    <option value=PersonInfo.Department>@Model.PersonInfo.Department</option>
+                    @foreach (var dept in Model.DepartmentList)
+                    {
+                        @if (@dept.Name != @Model.PersonInfo.Department)
+                        {
+                            <option value=@dept.Name>@dept.Name</option>
+                        }
+                    }
+                </select>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Years" class="col-md-2 control-label"></label>
+            <label asp-for="PersonInfo.Years" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Years" class="form-control" />
-                <span asp-validation-for="Years" class="text-danger"></span>
+                <input asp-for="PersonInfo.Years" class="form-control" />
+                <span asp-validation-for="PersonInfo.Years" class="text-danger"></span>
             </div>
         </div>
         <!-- Submit does wheatever the  -->

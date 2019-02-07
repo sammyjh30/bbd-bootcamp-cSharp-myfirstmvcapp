@@ -36,6 +36,7 @@ namespace myfirstmvcapp.Controllers
             {
                 return NotFound();
             }
+            // PersonInfo
 
             var person = PersonData.People.FirstOrDefault(p => p.Id == id.Value);
 
@@ -43,13 +44,32 @@ namespace myfirstmvcapp.Controllers
             {
                 return NotFound();
             }
-
-            return View(person);
+            var department = DepartmentData.Department;
+            var model = new AddPersonModel();
+            if (department != null)
+            {
+                model.DepartmentList = department;
+            }
+            if (person != null)
+            {
+                model.PersonInfo = person;
+            }
+            return View(model);
         }
 
          public IActionResult Add()
         {
-           return View();
+            var department = DepartmentData.Department;
+            var model = new AddPersonModel();
+
+            if (department != null)
+            {
+                model.DepartmentList = department;
+            }
+
+
+            return View(model);
+        //    return View();/
         }
 
          public IActionResult Delete(int? id)

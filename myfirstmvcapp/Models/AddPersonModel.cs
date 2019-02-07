@@ -7,9 +7,9 @@ using myfirstmvcapp.StaticData;
 
 namespace myfirstmvcapp.Models
 {
-    public class AddPersonModel
+    public class AddPersonModel : Person
     {
-        public Person PersonInfo { get; set; }
+        public Person PersonInfo {get; set;}
         public List<Department> DepartmentList { get; set; }
     }
 }

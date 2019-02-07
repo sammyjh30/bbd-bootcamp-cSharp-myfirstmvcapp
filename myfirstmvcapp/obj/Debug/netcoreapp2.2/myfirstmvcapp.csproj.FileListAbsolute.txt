@@ -73,4 +73,3 @@ C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\Departments.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\DeleteDepartment.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\EditDepartment.g.cshtml.cs
-C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\_DepartmentUsers.g.cshtml.cs
