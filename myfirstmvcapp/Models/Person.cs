@@ -20,14 +20,6 @@ namespace myfirstmvcapp.Models
             existingPerson.Department = newPerson.Department;
             existingPerson.Years = newPerson.Years;
         }
-
-        // public static void CreateNewPerson(Person newPerson)
-        // {
-        //     var existingPerson = PersonData.People.FirstOrDefault(p => p.Id == idToUpdate);
-        //     existingPerson.Name = newPerson.Name;
-        //     existingPerson.Department = newPerson.Department;
-        //     existingPerson.Years = newPerson.Years;
-        // }
         
     }
 }

@@ -30,5 +30,11 @@ namespace myfirstmvcapp.StaticData
             var ID = listOfPeople[listOfPeople.Count - 1].Id + 1;
             listOfPeople.Add(new Person() {Id = ID, Name = newPerson.Name, Department = newPerson.Department, Years = newPerson.Years});
         }
+
+        public static void DeletePerson(int id)
+        {
+            var personToRemove = listOfPeople.Single(r => r.Id == id);
+            listOfPeople.Remove(personToRemove);
+        }
     }
 }

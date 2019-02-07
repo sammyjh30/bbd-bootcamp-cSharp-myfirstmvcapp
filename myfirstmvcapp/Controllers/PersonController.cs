@@ -52,6 +52,11 @@ namespace myfirstmvcapp.Controllers
            return View();
         }
 
+         public IActionResult Delete(int? id)
+        {
+           return View();
+        }
+
         public IActionResult List()
         {
             var person = (from user in PersonData.People
@@ -104,6 +109,18 @@ namespace myfirstmvcapp.Controllers
             }
 
             return View(person);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                PersonData.DeletePerson(id);
+                return RedirectToAction("List");
+            }
+
+            return View();
         }
 
     }

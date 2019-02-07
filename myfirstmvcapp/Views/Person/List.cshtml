@@ -23,7 +23,8 @@
                     <td>@user.Name</td>
                     <td>@user.Department</td>
                     <td>@user.Years</td>
-                    <td><button><a asp-action="Details" asp-route-id="@user.Id">Details</a></button><button><a asp-action="Details" asp-route-id="@user.Id">Delete</a></button></td>
+                    <td><button><a asp-action="Details" asp-route-id="@user.Id">Details</a></button><button>
+                        <a asp-action="Delete" asp-route-id="@user.Id">Delete</a></button></td>
                 </tr>
             }
         </table>
