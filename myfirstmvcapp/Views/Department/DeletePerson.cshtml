@@ -1,0 +1,22 @@
+@model myfirstmvcapp.Models.Department
+
+@{
+    ViewData["Title"] = "Delete Person";
+}
+
+<h2>@ViewData["Title"]</h2>
+<!-- asp-action looks for a post action call Edit. -->
+<form asp-action="DeleteDepartment">
+    <div class="form-horizontal">
+        <!-- Hidden ID Because if we don't when we post to edit the ID won't be there. -->
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <h3>Are you sure you would like to delete this user?</h3>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Yes" class="btn btn-default" />
+            </div>
+            <a asp-action="DepartmentList">Back</a>
+        </div>
+    </div>
+</form>
