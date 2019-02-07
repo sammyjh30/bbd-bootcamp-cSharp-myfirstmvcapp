@@ -10,6 +10,12 @@ using myfirstmvcapp.StaticData;
 
 namespace myfirstmvcapp.Controllers
 {
+    // public class ViewModel
+    // {
+    //     public Department DepartmentInfo { get; set; }
+    //     public List<Person> DepartmentPeople { get; set; }
+    // }
+
     public class DepartmentController : Controller
     {
         public IActionResult DepartmentDetails(int? id)
@@ -18,16 +24,21 @@ namespace myfirstmvcapp.Controllers
             {
                 return NotFound();
             }
+            var model = new ViewModel();
 
-            //Looks for first thing that matches condition. If it doesn't find it creates null.
+
             var department = DepartmentData.Department.FirstOrDefault(p => p.Id == id.Value);
-
             if (department == null)
             {
                 return NotFound();
             }
+            var deptPeople = PersonData.People.FindAll(p => p.Department == department.Name);
+            if (department != null)
+                model.DepartmentInfo = department;
+            if (deptPeople != null)
+                model.DepartmentPeople = deptPeople;
 
-            return View(department);
+            return View(model);
         }
 
         public IActionResult EditDepartment(int? id)
@@ -47,29 +58,29 @@ namespace myfirstmvcapp.Controllers
             return View(department);
         }
 
-         public IActionResult AddDepartment()
+        public IActionResult AddDepartment()
         {
-           return View();
+            return View();
         }
 
-         public IActionResult DeleteDepartment(int? id)
+        public IActionResult DeleteDepartment(int? id)
         {
-           return View();
+            return View();
         }
 
         public IActionResult DepartmentList()
         {
             var department = (from user in DepartmentData.Department
-                          select new
-                          {
-                              Id = user.Id,
-                              Name = user.Name
-                          }).ToList().Select(p => new Department()
+                              select new
+                              {
+                                  Id = user.Id,
+                                  Name = user.Name
+                              }).ToList().Select(p => new Department()
 
-                          {
-                              Id = p.Id,
-                              Name = p.Name
-                          });
+                              {
+                                  Id = p.Id,
+                                  Name = p.Name
+                              });
 
             if (department == null)
             {

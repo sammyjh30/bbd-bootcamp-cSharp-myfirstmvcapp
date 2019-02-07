@@ -1,4 +1,4 @@
-@model myfirstmvcapp.Models.Department
+@model myfirstmvcapp.Models.ViewModel
 
 @{
     ViewData["Title"] = "Department";
@@ -9,13 +9,33 @@
 <div>
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.DepartmentInfo.Name)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.DepartmentInfo.Name)
         </dd>
+    </dl>
+    <dl>
+        <hr />
+        <dt>People who are in this Department:</dt>
+        <div class="panel-body">
+        <table class="table table-hover table-bordered table-condensed" id="example1">
+            <thead>
+                <tr>
+                    <td><b>Name</b></td>
+                </tr>
+                @foreach (var user in Model.DepartmentPeople)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                    </tr>
+                }
+            </thead>
+            
+        </table>
+        
     </dl>
 </div>
 <div>
-    <a asp-action="EditDepartment" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="EditDepartment" asp-route-id="@Model.DepartmentInfo.Id">Edit</a>
 </div>
