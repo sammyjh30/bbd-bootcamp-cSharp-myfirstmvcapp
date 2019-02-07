@@ -1,0 +1,27 @@
+@model myfirstmvcapp.Models.Department
+
+@{
+    ViewData["Title"] = "Edit Department";
+}
+
+<h2>@ViewData["Title"]</h2>
+<!-- asp-action looks for a post action call Edit. -->
+<form asp-action="EditDepartment">
+    <div class="form-horizontal">
+        <!-- Hidden ID Because if we don't when we post to edit the ID won't be there. -->
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <!-- Submit does wheatever the  -->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>

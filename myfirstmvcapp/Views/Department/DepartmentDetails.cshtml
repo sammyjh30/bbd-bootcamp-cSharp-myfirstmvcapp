@@ -1,0 +1,21 @@
+@model myfirstmvcapp.Models.Department
+
+@{
+    ViewData["Title"] = "Department";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditDepartment" asp-route-id="@Model.Id">Edit</a>
+</div>

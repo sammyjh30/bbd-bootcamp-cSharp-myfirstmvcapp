@@ -67,10 +67,9 @@ C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Person\List.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Person\Add.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Person\Delete.g.cshtml.cs
-C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\ListDepartment.g.cshtml.cs
-C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\DetailsDepartment.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\AddDepartment.g.cshtml.cs
-C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\DeletePerson.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\DepartmentDetails.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\DepartmentList.g.cshtml.cs
 C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\Departments.g.cshtml.cs
+C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\DeleteDepartment.g.cshtml.cs
+C:\Users\bbdnet2004\Documents\Learning\dotNET\mvcapp_app\myfirstmvcapp\obj\Debug\netcoreapp2.2\Razor\Views\Department\EditDepartment.g.cshtml.cs

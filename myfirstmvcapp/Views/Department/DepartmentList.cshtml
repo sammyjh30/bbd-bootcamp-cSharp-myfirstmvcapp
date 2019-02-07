@@ -19,8 +19,8 @@
             {
                 <tr>
                     <td>@department.Name</td>
-                    <td><button><a asp-action="Details" asp-route-id="@department.Id">Details</a></button><button>
-                        <a asp-action="Delete" asp-route-id="@department.Id">Delete</a></button></td>
+                    <td><button><a asp-action="DepartmentDetails" asp-route-id="@department.Id">Details</a></button><button>
+                        <a asp-action="DeleteDepartment" asp-route-id="@department.Id">Delete</a></button></td>
                 </tr>
             }
         </table>
