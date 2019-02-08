@@ -46,14 +46,19 @@ namespace myfirstmvcapp.Controllers
             }
             var department = DepartmentData.Department;
             var model = new AddPersonModel();
+            if (person != null)
+            {
+                // model = (AddPersonModel)person;
+                model.Id = person.Id;
+                model.Name = person.Name;
+                model.Department = person.Department;
+                model.Years = person.Years;
+            }
             if (department != null)
             {
                 model.DepartmentList = department;
             }
-            if (person != null)
-            {
-                model.PersonInfo = person;
-            }
+            
             return View(model);
         }
 
@@ -67,9 +72,7 @@ namespace myfirstmvcapp.Controllers
                 model.DepartmentList = department;
             }
 
-
             return View(model);
-        //    return View();/
         }
 
          public IActionResult Delete(int? id)
@@ -103,8 +106,12 @@ namespace myfirstmvcapp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(int id, [Bind("Id,Name,Department,Years")] Person person)
+        public IActionResult Edit(int id, AddPersonModel person)
         {
+            Console.WriteLine("TEST");
+            Console.WriteLine(id);
+            Console.WriteLine(person.Id);
+            Console.WriteLine(person.Name);
             if (id != person.Id)
             {
                 return NotFound();
@@ -120,7 +127,7 @@ namespace myfirstmvcapp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Person person)
+        public IActionResult Add(AddPersonModel person)
         {
             if (ModelState.IsValid)
             {

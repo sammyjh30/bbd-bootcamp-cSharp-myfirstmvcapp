@@ -9,22 +9,22 @@
 <form asp-action="Edit">
     <div class="form-horizontal">
         <!-- Hidden ID Because if we don't when we post to edit the ID won't be there. -->
-        <input type="hidden" asp-for="PersonInfo.Id" />
+        <input type="hidden" asp-for="Id" />
         <div class="form-group">
-            <label asp-for="PersonInfo.Name" class="col-md-2 control-label"></label>
+            <label asp-for="Name" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="PersonInfo.Name" class="form-control" />
-                <span asp-validation-for="PersonInfo.Name" class="text-danger"></span>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="PersonInfo.Department" class="col-md-2 control-label"></label>
+            <label asp-for="Department" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select name="PersonInfo.Department" asp-validation-for="PersonInfo.Department" class="form-control">
-                    <option value=PersonInfo.Department>@Model.PersonInfo.Department</option>
+                <select name="Department" asp-validation-for="Department" class="form-control">
+                    <option value=Department>@Model.Department</option>
                     @foreach (var dept in Model.DepartmentList)
                     {
-                        @if (@dept.Name != @Model.PersonInfo.Department)
+                        @if (@dept.Name != @Model.Department)
                         {
                             <option value=@dept.Name>@dept.Name</option>
                         }
@@ -33,10 +33,10 @@
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="PersonInfo.Years" class="col-md-2 control-label"></label>
+            <label asp-for="Years" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="PersonInfo.Years" class="form-control" />
-                <span asp-validation-for="PersonInfo.Years" class="text-danger"></span>
+                <input asp-for="Years" class="form-control" />
+                <span asp-validation-for="Years" class="text-danger"></span>
             </div>
         </div>
         <!-- Submit does wheatever the  -->
