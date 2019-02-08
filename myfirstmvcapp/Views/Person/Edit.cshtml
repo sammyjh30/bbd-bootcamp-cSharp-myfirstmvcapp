@@ -24,7 +24,11 @@
                     <option value=Department>@Model.Department</option>
                     @foreach (var dept in Model.DepartmentList)
                     {
-                        @if (@dept.Name != @Model.Department)
+                        @if (@dept.Name == @Model.Department)
+                        {
+                            <option value=@dept.Name selected="selected">@dept.Name</option>
+                        }
+                        else
                         {
                             <option value=@dept.Name>@dept.Name</option>
                         }

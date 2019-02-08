@@ -111,7 +111,7 @@ namespace myfirstmvcapp.Controllers
             Console.WriteLine("TEST");
             Console.WriteLine(id);
             Console.WriteLine(person.Id);
-            Console.WriteLine(person.Name);
+            Console.WriteLine(person.Department);
             if (id != person.Id)
             {
                 return NotFound();
